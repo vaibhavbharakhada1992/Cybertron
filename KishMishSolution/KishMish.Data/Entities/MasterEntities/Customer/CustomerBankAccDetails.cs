@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace KishMish.Entities.MasterEntities.Customer
+namespace KishMish.Data.Entities.MasterEntities
 {
     public class CustomerBankAccDetails
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace KishMish.Entities.TradersEntities
+namespace KishMish.Data.Entities.MasterEntities
 {
     public class BaseTraders
     {
