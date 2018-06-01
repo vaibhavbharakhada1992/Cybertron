@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace KishMish.Web.Models.Master
 {
-    public class VMLoginTrader
+    public class VMLoginUser
     {
         
         private string userName;

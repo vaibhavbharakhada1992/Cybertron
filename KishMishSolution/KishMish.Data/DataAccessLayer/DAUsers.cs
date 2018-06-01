@@ -5,8 +5,9 @@ using System.Web;
 
 namespace KishMish.Data.DataAccessLayer
 {
-    public static class DATraders
+    public static class DAUsers
     {
+        
         public static bool DA_AuthenticateLoginDetails(string userName, string password)
         {
             if (userName == "vaibhav" && password == "vaibhav")

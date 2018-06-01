@@ -5,7 +5,7 @@ using System.Web;
 
 namespace KishMish.Web.Models.Master
 {
-    public class VMRegisterTrader
+    public class VMRegisterUser
     {
     }
 }
