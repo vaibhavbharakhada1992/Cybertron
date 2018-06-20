@@ -11,6 +11,8 @@ namespace KishMish.Web.Models.Master
         
         private string userName;
         private string password;
+        private bool isRemember;
+
         [Required]
         [Display(Name ="User Name :")]
         public string UserName
@@ -38,6 +40,19 @@ namespace KishMish.Web.Models.Master
             set
             {
                 password = value;
+            }
+        }
+
+        public bool IsRemember
+        {
+            get
+            {
+                return isRemember;
+            }
+
+            set
+            {
+                isRemember = value;
             }
         }
     }

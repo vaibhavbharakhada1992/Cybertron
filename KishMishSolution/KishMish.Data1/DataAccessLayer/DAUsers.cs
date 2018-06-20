@@ -32,13 +32,13 @@ namespace KishMish.Data.DataAccessLayer
 
         public static bool DA_CheckUserExistance(string emailId)
         {
-            tb_users users = null;
+            User users = null;
             bool retval = false;
             try
             {
-                using (kishmishEntities1 db = new kishmishEntities1())
+                using (KishMishEntities db = new KishMishEntities())
                 {
-                    users = db.tb_users.Where(m => m.email == emailId).FirstOrDefault();
+                    users = db.Users.Where(m => m.EmailId == emailId).FirstOrDefault();
                     if (users != null)
                     {
                         retval = true;
@@ -63,12 +63,12 @@ namespace KishMish.Data.DataAccessLayer
             bool retval = false;
             try
             {
-                using (kishmishEntities1 db = new kishmishEntities1())
+                using (KishMishEntities db = new KishMishEntities())
                 {
-                    tb_users users = db.tb_users.Where(m => m.email == userName).FirstOrDefault();
+                    User users = db.Users.Where(m => m.EmailId == userName).FirstOrDefault();
                     if (users != null)
                     {
-                        if (users.password == password)
+                        if (users.Password == password)
                         {
                             retval = true;
                         }

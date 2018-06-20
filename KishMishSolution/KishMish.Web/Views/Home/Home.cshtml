@@ -2,10 +2,23 @@
 @{
     ViewBag.Title = "Home";
 }
-@{ if (Session["userID"] != null)
-    {
-        <h2>WelCome</h2> @Session["userID"].ToString();
-    } }
+<div class="col-md-2">
+    @{ if (Session["userID"] != null)
+        {
+            <h2>WelCome</h2> @HttpContext.Current.User.Identity.Name;
+        } }
     Welcome
-<h2>Home</h2>
+</div>
+
+<div class="col-md-8">
+    <h2>Home</h2>
+</div>
+
+
+<div class="col-md-2">
+    @using (Html.BeginForm("Logout", "Home", FormMethod.Post))
+    {
+        <input type="submit" value="Log Out" />
+    }
+</div>
 

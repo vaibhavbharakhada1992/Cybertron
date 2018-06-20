@@ -118,24 +118,41 @@
   <ItemGroup>
     <Content Include="DBkishmish.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBkishmish.edmx</DependentUpon>
+      <DependentUpon>DBkishmish_mysql.edmx</DependentUpon>
       <LastGenOutput>DBkishmish.Context.cs</LastGenOutput>
     </Content>
     <Content Include="DBkishmish.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBkishmish.edmx</DependentUpon>
+      <DependentUpon>DBkishmish_mysql.edmx</DependentUpon>
       <LastGenOutput>DBkishmish.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB_KishMish.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_KishMish.edmx</DependentUpon>
+      <LastGenOutput>DB_KishMish.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB_KishMish.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_KishMish.edmx</DependentUpon>
+      <LastGenOutput>DB_KishMish.cs</LastGenOutput>
     </Content>
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="DBkishmish.edmx">
+    <EntityDeploy Include="DBkishmish_mysql.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBkishmish.Designer.cs</LastGenOutput>
+      <LastGenOutput>DBkishmish_mysql.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="DBkishmish.edmx.diagram">
-      <DependentUpon>DBkishmish.edmx</DependentUpon>
+    <Content Include="DBkishmish_mysql.edmx.diagram">
+      <DependentUpon>DBkishmish_mysql.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="DB_KishMish.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_KishMish.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DB_KishMish.edmx.diagram">
+      <DependentUpon>DB_KishMish.edmx</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -163,10 +180,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBkishmish.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBkishmish.Designer.cs">
+    <Compile Include="DBkishmish_mysql.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBkishmish.edmx</DependentUpon>
+      <DependentUpon>DBkishmish_mysql.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB_KishMish.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_KishMish.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB_KishMish.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_KishMish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB_KishMish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_KishMish.edmx</DependentUpon>
     </Compile>
     <Compile Include="Entities\MasterEntities\Customer\BaseCustomer.cs" />
     <Compile Include="Entities\MasterEntities\Customer\CustomerBankAccDetails.cs" />
@@ -174,6 +206,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tb_users.cs">
       <DependentUpon>DBkishmish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>DB_KishMish.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
